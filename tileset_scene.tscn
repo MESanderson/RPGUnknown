@@ -4,22 +4,14 @@
 
 [node name="Node2D" type="Node2D" index="0"]
 
-[node name="Total" type="Sprite" parent="." index="0"]
+[node name="GrassIslandNW" type="Sprite" parent="." index="0"]
 
-visible = false
-texture = ExtResource( 1 )
-region_rect = Rect2( 16, 0, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="grassislandNW" type="Sprite" parent="." index="1"]
-
-visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="grassislandNW" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandNW" index="0"]
 
 visible = false
 input_pickable = false
@@ -30,73 +22,34 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassislandNW/StaticBody2D" index="0"]
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandNW/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 1, -1, 1, -1, 8, -8, 8 )
+
+[node name="GrassIslandN" type="Sprite" parent="." index="1"]
 
 visible = false
-build_mode = 0
-polygon = PoolVector2Array( 8, -8, 8, 8, -8, 8, -8, -5, 0, -5, 0, -8 )
-
-[node name="grassislandN" type="Sprite" parent="." index="2"]
-
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 16, 0, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="grassislandNE" type="Sprite" parent="." index="3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandN" index="0"]
 
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 32, 0, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="grassislandW" type="Sprite" parent="." index="4"]
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandN/StaticBody2D" index="0"]
 
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 16, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
-
-[node name="plaingrass" type="Sprite" parent="." index="5"]
-
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 16, 16, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
-
-[node name="grassislandE" type="Sprite" parent="." index="6"]
-
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 32, 16, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
-
-[node name="grassislandSW" type="Sprite" parent="." index="7"]
-
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 32, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
-
-[node name="grassislandS" type="Sprite" parent="." index="8"]
-
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 16, 32, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
-
-[node name="grassislandSE" type="Sprite" parent="." index="9"]
-
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 32, 32, 16, 16 )
-region_filter_clip = true
-_sections_unfolded = [ "Region" ]
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, 8, 8, 1, -8, 1, -8, 8 )
 
 
