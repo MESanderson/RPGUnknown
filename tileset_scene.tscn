@@ -4,8 +4,12 @@
 
 [node name="Node2D" type="Node2D" index="0"]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="GrassIslandNW" type="Sprite" parent="." index="0"]
 
+editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 16 )
@@ -24,11 +28,13 @@ bounce = 0.0
 
 [node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandNW/StaticBody2D" index="0"]
 
+visible = false
 build_mode = 0
-polygon = PoolVector2Array( -8, -8, 8, -8, 8, 1, -1, 1, -1, 8, -8, 8 )
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 0, 0, 0, 0, 8, -8, 8 )
 
 [node name="GrassIslandN" type="Sprite" parent="." index="1"]
 
+editor/display_folded = true
 visible = false
 texture = ExtResource( 1 )
 region_enabled = true
@@ -50,6 +56,472 @@ bounce = 0.0
 
 visible = false
 build_mode = 0
-polygon = PoolVector2Array( 8, 8, 8, 1, -8, 1, -8, 8 )
+polygon = PoolVector2Array( 8, -8, 8, 0, -8, 0, -8, -8 )
+
+[node name="GrassIslandNE" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandNE" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandNE/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, -8, 0, -8, -8, 8, -8, 8, 8, 0, 8 )
+
+[node name="GrassIslandW" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandW" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandW/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -8, 8, -8, -8, 0, -8, 0, 8 )
+
+[node name="GrassIsland" type="Sprite" parent="." index="4"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassIslandE" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandE" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandE/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, 8, 8, -8, 0, -8, 0, 8 )
+
+[node name="GrassIslandSW" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandSW" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandSW/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, 8, 8, 0, 0, 0, 0, -8, -8, -8, -8, 8 )
+
+[node name="GrassIslandS" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandS" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandS/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, 8, 8, 0, -8, 0, -8, 8 )
+
+[node name="GrassIslandSE" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassIslandSE" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="GrassIslandSE/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 0, -8, 8, -8, 8, 8, -8, 8, -8, 0 )
+
+[node name="GrassPatchNW" type="Sprite" parent="." index="9"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 48, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchN" type="Sprite" parent="." index="10"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 48, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchNE" type="Sprite" parent="." index="11"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 48, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchW" type="Sprite" parent="." index="12"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchMid" type="Sprite" parent="." index="13"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 64, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchE" type="Sprite" parent="." index="14"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchSW" type="Sprite" parent="." index="15"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 80, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchS" type="Sprite" parent="." index="16"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 80, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="GrassPatchSE" type="Sprite" parent="." index="17"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 80, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="DesertIslandNW" type="Sprite" parent="." index="18"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 96, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandNW" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandNW/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 0, 0, 0, 0, 8, -8, 8 )
+
+[node name="DesertIslandN" type="Sprite" parent="." index="19"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 96, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandN" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandN/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, 0, 8, 8, -8, 8, -8, 0 )
+
+[node name="DesertIslandNE" type="Sprite" parent="." index="20"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandNE" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandNE/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, -8, 8, 8, 0, 8, 0, 0, -8, 0, -8, -8 )
+
+[node name="DesertIslandW" type="Sprite" parent="." index="21"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 112, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandW" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandW/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0, -8, 0, 8, -8, 8, -8, -8 )
+
+[node name="DesertIslandMid" type="Sprite" parent="." index="22"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 112, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="DesertIslandE" type="Sprite" parent="." index="23"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 112, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandE" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandE/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 8, -8, 8, 8, 0, 8, 0, -8 )
+
+[node name="DesertIslandSW" type="Sprite" parent="." index="24"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 128, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandSW" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandSW/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0, -8, 0, 0, 8, 0, 8, 8, -8, 8, -8, -8 )
+
+[node name="DesertIslandS" type="Sprite" parent="." index="25"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 128, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandS" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandS/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -8, 0, 8, 0, 8, 8, -8, 8 )
+
+[node name="DesertIslandSE" type="Sprite" parent="." index="26"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 128, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DesertIslandSE" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LandCollision" type="CollisionPolygon2D" parent="DesertIslandSE/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 0, -8, 8, -8, 8, 8, -8, 8, -8, 0 )
+
+[node name="WaterCalm" type="Sprite" parent="." index="27"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 144, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="WaterWaves1" type="Sprite" parent="." index="28"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 128, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
+
+[node name="WaterWaves2" type="Sprite" parent="." index="29"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 128, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Region" ]
 
 
